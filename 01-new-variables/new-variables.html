@@ -7,5 +7,65 @@
 <body>
   <h1>Let and Const</h1>
   <p>hello alksjdflkasd</p>
+  <script>
+    function setWidth() {
+      var width = 100 // function scoped, if there is no function, it becomes a global variable;
+      console.log(width);
+    }
+    setWidth();
+    
+    // let and const are block scoped
+    var age = 100;
+    if(age > 12) {
+      const dogYears = age * 7;
+      console.log(`You are ${dogYears} dog years old!`);
+    }
+
+    let height = 200;
+    
+    const key = 'abc123';
+    let points = 50;
+    let winner = false;
+
+    points = 60;
+
+    // key = 'abc1234'; // you cannot update a constant variable
+
+    if(points > 40) {
+      console.log("it ran");
+      let winner = true;
+    }
+  
+    const person = {
+      name: 'West',
+      age: 28
+    }
+    console.log(person);
+
+    person.name = "Wesley";
+
+    console.log(person);
+    
+    {
+      const name = 'wes';
+      console.log(name);
+    }
+    
+    for(let i = 0; i < 10; i++) {
+      console.log(i);
+      setTimeout(function() {
+        console.log('the number is ' + i);
+      }, 1000);
+    }
+
+    // temporal dead zone
+    console.log(pizza);
+    const pizza = "Deep Dish 🍕";
+    // you cannot access a variable before it has been created.
+
+    
+
+
+  </script>
 </body>
 </html>
