@@ -38,30 +38,30 @@
     { name: 'Sunny', age: 1 }
   ];
 
-   const dogMarkup = `
+  const dogMarkup = `
     <ul class="dogs">
       ${dogs.map(dog => `<li>${dog.name} is ${dog.age * 7}</li>`).join('')}
     </ul>
-   `;
+  `;
 
-   // document.body.innerHTML = dogMarkup;
+  // document.body.innerHTML = dogMarkup;
 
-   const song = {
+  const song = {
     name: 'Dying to Live',
     artist: 'Tupac',
     featuring: 'Biggie Smalls'
-   }
+  }
 
-   const songMarkup = `
-      <div class="song">
-        <p>
-          ${song.name} - ${song.artist}
-          ${song.featuring ? `(Featuring ${song.featuring})` : ""}
-        </p>
-      </div>
-   `;
+  const songMarkup = `
+    <div class="song">
+      <p>
+        ${song.name} - ${song.artist}
+        ${song.featuring ? `(Featuring ${song.featuring})` : ""}
+      </p>
+    </div>
+  `;
 
-   // document.body.innerHTML = songMarkup;
+  // document.body.innerHTML = songMarkup;
 
   const beer = {
     name: 'Belgian Wit',
