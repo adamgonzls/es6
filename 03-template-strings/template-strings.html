@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Template Strings</title>
+  <style>
+    .h1 {
+      background-color: yellow;
+    }
+  </style>
 </head>
 <body>
   <h1>Template Strings</h1>
   <script>
-  const name = 'Snickers';
-  const age = 2;
-  const sentence = `My dog ${name} is ${age * 7} years old.`;
-  console.log(sentence);
+  // const name = 'Snickers';
+  // const age = 2;
+  // const sentence = `My dog ${name} is ${age * 7} years old.`;
+  // console.log(sentence);
 
   const person = {
   name: 'Wes',
@@ -85,7 +90,22 @@
     </div>
   `;
 
-  document.body.innerHTML = beerMarkup;
+  // document.body.innerHTML = beerMarkup;
+  
+  // tagged template literals
+  function highlight(strings, ...values) {
+    let str = '';
+    strings.forEach((string, i) => {
+      str += `${string} <span class="h1">${values[i] || ''}</span>`;
+    });
+    return str;
+  }
+
+  const name = 'Snickers';
+  const age = 100;
+  const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
+  document.body.innerHTML = sentence;
+  console.log(sentence);
 
 
   </script>
